@@ -1,0 +1,20 @@
+<h1>Edit new job</h1>
+<%= form_with model: @job, class: 'book-form' do |f| %>
+  <p> Please provide the following information</p>
+  <div>
+  <%= f.label :title%>
+  <%= f.text_field :title%>
+  </div>
+  <br>
+  <div>
+  <%= f.label :description%>
+  <%= f.text_area :description%>
+  </div>
+  <br>
+  <div>
+  <%= f.label :company%>
+  <%= f.text_field :company%>
+  </div>
+  <br>
+  <%= f.submit "edit a job", class: 'job-button'%>
+<% end %>
