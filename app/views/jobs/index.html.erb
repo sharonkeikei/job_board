@@ -3,5 +3,10 @@
   <div class='job'>
   <strong> <%= link_to job.title, job_path(job.id) %></strong>
   <%= job.description %>
+  <%= link_to 'Edit', edit_job_path(job.id)%>
+  <%= link_to 'Delete', delete_job_path(job.id), method: :delete, data: { confirm: 'are you sure?'} %>
   </div>
 <% end%>
+  <p>
+  <%= link_to 'Add a new job', jobs_new_path%>
+  </p>
