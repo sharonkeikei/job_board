@@ -3,4 +3,5 @@
   <strong><%= @job.title %></strong>
   <p><%= @job.description %></p>
   <%= link_to 'Edit job', edit_job_path(@job.id) %>
+  <%= link_to 'Delete job', delete_job_path(@job.id), method: :delete, data: {confirm: 'are you sure?'} %>
 <div>

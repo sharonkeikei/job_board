@@ -50,6 +50,10 @@ class JobsController < ApplicationController
   end
 
   def delete
+    @job = Job.find(params[:id])
+    if @job.destroy
+      redirect_to jobs_path
+    end 
   end
 
 end
